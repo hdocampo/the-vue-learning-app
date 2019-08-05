@@ -1,26 +1,50 @@
 <template>
   <div id="app">
-    <input
-      v-model="message"
-      type="text">
-      <h2 class="message">{{ message }}</h2>
+    <header>
+      <header-app />
+      <color-selector
+        :color-list="colorList" />
+    </header>
+    <input-changes-model
+      :initial-text="message" />
+    <footer-app></footer-app>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      message: 'Hello world!',
-    };
-  },
-};
-</script>
+    // we can name the module as we want!
+    import inputChangesModel from './components/input-model/input-model.vue';
+    import headerApp from './components/header/header.vue';
+    import footerApp from './components/footer/footer.vue';
+    import colorSelector from './components/color-selector/color-selector.vue'
 
-<style>
-.message {
-  font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  color: blue;
-}
-</style>
+    export default {
+      data() {
+        return {
+          message: 'Hello world!',
+          colorList: colorsOfTheApp
+        };
+      },
+      components: {
+        headerApp,
+        footerApp,
+        inputChangesModel,
+        colorSelector
+      }
+    };
+
+    const colorsOfTheApp = [
+      { 
+        name: 'white',
+        value: '#ffffff'
+      }, 
+      { 
+        name: 'red',
+        value: '#EA4335'
+      },
+      { 
+        name: 'blue',
+        value: '#4285F4'
+      }
+    ]
+</script>
