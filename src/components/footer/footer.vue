@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer class="text-center">
         <small>This site is compliant with my own policy</small>
     </footer>
 </template>
@@ -9,3 +9,6 @@ export default {
     
 }
 </script>
+<style>
+    @import url('./footer.css');
+</style>

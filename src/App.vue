@@ -1,26 +1,15 @@
 <template>
-  <div id="app">
-    <header>
-      <header-app />
-    </header>
-    <router-view></router-view>
+  <div id="app" class="container">
+    <header-app />
+    <div class="content">
+      <router-view></router-view>
+    </div>
     <footer-app></footer-app>
   </div>
 </template>
 
-<script>
-    // we can name the module as we want!
-    import headerApp from './components/header/header.vue';
-    import footerApp from './components/footer/footer.vue';
+<script src="./App.js"></script>
 
-    export default {
-      data() {
-        return {
-        };
-      },
-      components: {
-        headerApp,
-        footerApp
-      }
-    };
-</script>
+<style>
+  @import url('./App.css');
+</style>

@@ -9,4 +9,3 @@
 </template>
 
 <script src="./input-model.js"></script>
-

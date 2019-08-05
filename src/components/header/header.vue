@@ -1,12 +1,10 @@
 <template>
     <div>
-        <ul>
-            <li v-for="item in links"
+        <b-nav>
+            <b-nav-item v-for="item in links"
                 :key="item.index"
-            >
-                <router-link :to=item.url> {{ item.text }} </router-link>
-            </li>
-        </ul>
+                :to=item.url>{{ item.text }}</b-nav-item>
+        </b-nav>
     </div>
 </template>
 
