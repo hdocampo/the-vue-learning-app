@@ -18,8 +18,8 @@ const menuLinks = [
         extraClass: null
     },
     {
-        text: 'Products',
-        url: './products',
+        text: 'Contact',
+        url: './contact',
         extraClass: null
     }
 ]

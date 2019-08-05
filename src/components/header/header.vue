@@ -4,7 +4,7 @@
             <li v-for="item in links"
                 :key="item.index"
             >
-                <a :href="item.url">{{ item.text }}</a>
+                <router-link :to=item.url> {{ item.text }} </router-link>
             </li>
         </ul>
     </div>
