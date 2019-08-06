@@ -1,46 +1,29 @@
 <template>
-
     <div>
-        <color-selector
-            :color-list="colorList" />
-    
-        <input-changes-model
-        :initial-text="message" />
+        <landing-home 
+          :main-message="message"
+          :button-url="buttonUrl"
+          :button-text="buttonText"
+          :button-class="buttonClass"
+        />
     </div>
-  
-  
 </template>
 
 <script>
     // we can name the module as we want!
-    import inputChangesModel from '../components/input-model/input-model.vue';
-    import colorSelector from '../components/color-selector/color-selector.vue'
+    import landingHome from '../components/landing/landing.vue'
 
     export default {
       data() {
         return {
-          message: 'Hello world!',
-          colorList: colorsOfTheApp
+          message: 'Hello Javascripters of Endava!',
+          buttonUrl: '#/products',
+          buttonText: 'Let see the products',
+          buttonClass: 'success'
         };
       },
       components: {
-        inputChangesModel,
-        colorSelector
+        landingHome,
       }
     };
-
-    const colorsOfTheApp = [
-      { 
-        name: 'white',
-        value: '#ffffff'
-      }, 
-      { 
-        name: 'red',
-        value: '#EA4335'
-      },
-      { 
-        name: 'blue',
-        value: '#4285F4'
-      }
-    ]
 </script>

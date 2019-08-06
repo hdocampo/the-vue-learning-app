@@ -14,6 +14,6 @@ new Vue({
   router,
   render: h => h(App),
   mounted: function() {
-    console.log(router);
+    console.log('Vue Router loaded successfully');
   }
 });

@@ -1,12 +1,17 @@
 <template>
-    <div>
+    <header>
         <b-nav>
             <b-nav-item v-for="item in links"
                 :key="item.index"
-                :to=item.url>{{ item.text }}</b-nav-item>
+                :to=item.path>
+                {{ item.name }}
+            </b-nav-item>
         </b-nav>
-    </div>
+    </header>
 </template>
 
 <script src="./header.js"></script>
+<style>
+  @import url('./header.css');
+</style>
 

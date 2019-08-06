@@ -1,6 +1,6 @@
 <template>
     <footer class="text-center">
-        <small>This site is compliant with my own policy</small>
+        <small>Welcome aboard Vue!</small>
     </footer>
 </template>
 
